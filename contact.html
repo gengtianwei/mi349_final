@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link href="css/style.css" rel="stylesheet" />
+<title>Carmind</title>
+ <style type="text/css">
+     .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+</style>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script> 
+</head>
+
+<body>
+<div class="head">
+  <div class="head_in">
+    <div class="logo">
+      <h1><a href="index.html"></a> </h1>
+    </div>
+    <div class="nav">
+      <ul>
+        <li><a href="index.html">Homepage</a></li>
+      
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<div class="clear"></div>
+
+<div class="main">
+  <div class="title">
+    <h1>Contact Us</h1>
+  </div>
+  <div class="clear"></div>
+
+ 
+ 
+  <div style="width:950px;height:550px;border:#ccc solid 1px; margin:20px auto;" id="dituContent"></div>
+  <script type="text/javascript">
+
+    function initMap(){
+        createMap();
+        setMapEvent();
+        addMapControl();
+    }
+    
+    
+    function createMap(){
+        var map = new BMap.Map("dituContent");
+        var point = new BMap.Point(-84.490734,42.772624);
+        map.centerAndZoom(point,14);
+        window.map = map;
+    }
+    
+    
+    function setMapEvent(){
+        map.enableDragging();
+        map.enableScrollWheelZoom();
+        map.enableDoubleClickZoom();
+        map.enableKeyboard();
+    }
+    
+    
+    function addMapControl(){
+        
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	map.addControl(ctrl_nav);
+        
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	map.addControl(ctrl_ove);
+        
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    
+    
+    initMap();
+</script> 
+  <br />
+  <br />
+  <p>Address: 3636 Coleman Rd, Block 36, Rm 923, East Lansing, MI, United States</p>
+  <p>Phone: 5172205702</p>
+  <p>Email: tiangeng@msu.edu</p>
+  <p></p>
+  <p></p>
+  <br />
+  <br />
+  <br />
+  <br />
+</div>
+<div class="clear"></div>
+</body> 
+</html>
